@@ -221,7 +221,7 @@ local function LoadCfg(Config)
 				if BloodyLib.Flags[a].Type == "Colorpicker" then
 					BloodyLib.Flags[a]:Set(UnpackColor(b))
 				else
-					OrionLib.Flags[a]:Set(b)
+					BloodyLib.Flags[a]:Set(b)
 				end    
 			end)
 		else
@@ -376,7 +376,7 @@ end)
 
 local NotificationHolder = SetProps(SetChildren(MakeElement("TFrame"), {
 	SetProps(MakeElement("List"), {
-		HorizontalAlignment = Enum.HorizontalAlignment.Center,
+		HzontalAlignment = Enum.HorizontalAlignment.Center,
 		SortOrder = Enum.SortOrder.LayoutOrder,
 		VerticalAlignment = Enum.VerticalAlignment.Bottom,
 		Padding = UDim.new(0, 5)
@@ -1760,7 +1760,7 @@ function BloodyLib:MakeWindow(WindowConfig)
 end   
 
 function BloodyLib:Destroy()
-	OriBloodyLibon:Destroy()
+	BloodyLibon:Destroy()
 end
 
 return BloodyLib
